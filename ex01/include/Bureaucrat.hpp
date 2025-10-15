@@ -3,11 +3,13 @@
 
 #include <iostream>
 
+class Form;
+
 class Bureaucrat
 {
 private:
 	/* data */
-	std::string	_name;
+	const std::string	_name;
 	int	_grade;
 
 public:
@@ -21,9 +23,10 @@ public:
 	const std::string	&getName() const;
 	int	getGrade() const;
 
-	// Grade control
+	// behave
 	void	incrementGrade();
 	void	decrementGrade();
+	void	signForm(const Form &form) const;
 
 	// Exceptions
 	class GradeTooHighException : public std::exception
