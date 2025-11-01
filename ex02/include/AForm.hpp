@@ -13,6 +13,8 @@ private:
 	const int	_gradeToSign;
 	const int	_gradeToExec;
 
+	virtual void doExecute() const = 0;
+
 public:
 	AForm();
 	AForm(const std::string &name, int gradeToSign, int gradeToExec);
