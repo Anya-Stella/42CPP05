@@ -8,7 +8,10 @@ OBJ_DIR := bin
 ############################################################### SRCS ##############################################################
 SRC := \
 		Bureaucrat.cpp \
-		Form.cpp \
+		AForm.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp \
 		main.cpp
 
 

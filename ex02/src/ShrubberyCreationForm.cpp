@@ -1,4 +1,6 @@
 #include "../include/ShrubberyCreationForm.hpp"
+#include <fstream>
+#include <iostream>
 
 /*.default */
 ShrubberyCreationForm::ShrubberyCreationForm()
@@ -16,3 +18,18 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return *this;
 };
 ShrubberyCreationForm::~ShrubberyCreationForm(){};
+
+void ShrubberyCreationForm::doExecute() const{
+	std::ofstream ofs((_target + "_shrubbery").c_str());
+    if (!ofs)
+        throw std::runtime_error("Could not open file.");
+
+    ofs << "   /\\   " << std::endl;
+    ofs << "  /\\*\\  " << std::endl;
+    ofs << " /\\O\\*\\ " << std::endl;
+    ofs << "   ||   " << std::endl;
+    ofs << "   ||   " << std::endl;
+
+    ofs.close();
+    std::cout << _target << "_shrubbery created successfully 🌳" << std::endl;
+};

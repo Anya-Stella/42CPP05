@@ -20,7 +20,7 @@ public:
 	AForm(const std::string &name, int gradeToSign, int gradeToExec);
 	AForm(const AForm &other);
 	AForm &operator=(const AForm &rhs);
-	~AForm();
+	virtual ~AForm();
 
 	/* getters */
 	const std::string	&getName() const;

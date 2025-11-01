@@ -16,3 +16,14 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 	return *this;
 };
 RobotomyRequestForm::~RobotomyRequestForm(){};
+
+void	RobotomyRequestForm::doExecute() const{
+	std::cout << "Bzzz… Whirrr… Rrrrrrr…" << std::endl;
+
+	// reset use to current time.
+	std::srand(std::time(NULL));
+	if (std::rand() % 2)
+		std::cout << _target << " has been robotomized successfully 🤖" << std::endl;
+	else
+		std::cout << "Robotomy failed on " << _target << " 💥" << std::endl;
+}
